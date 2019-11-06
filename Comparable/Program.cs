@@ -37,15 +37,18 @@ namespace Comparable
     class Comparison:ICompareByName
     {
         public string Name { get; set; }
-       public int CompareByName()
+       public int CompareByName(object o)
         {
-            ;
-            
-            return 0;
+
+            Comparison that = o as Comparison;
+
+            return this.Name.CompareTo(that.Name);
         }
-       public int CompareByLength()
+       public int CompareByLength(object o)
         {
-            return 0;
+            Comparison that = o as Comparison;
+            
+            return this.Name.Length.CompareTo(that.Name.Length);
         }
 
 

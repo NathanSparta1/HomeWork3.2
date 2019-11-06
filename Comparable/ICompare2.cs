@@ -9,11 +9,11 @@ namespace Comparable
     
        interface ICompareByName:ICompareByLength
     { 
-        int CompareByName();
+        int CompareByName(object o);
     }
     interface ICompareByLength
     {
-        int CompareByLength();
+        int CompareByLength(object o);
     }
 
 
